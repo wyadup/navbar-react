@@ -1,0 +1,72 @@
+@import './shared-styles.scss';
+
+.nav-bar {
+  width: 100%;
+  height: 75px;
+  background: $bgColor;
+  box-shadow: 0 1px 5px $bgColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 175px;
+  position: relative;
+
+  .nav-bar__logo {
+    color: white;
+    font-size: 30px;
+    margin: 0 15px;
+  }
+
+  .nav-bar__items {
+    height: 100%;
+  }
+  
+  .nav-items-with-menu {
+    .menu {
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+      margin: 0 15px;
+    }
+    .nav-bar__items--menu {
+      background: $bgColor;
+      position: absolute;
+      width: 100%;
+      top: 75px;
+      right: 0;
+      padding: 15px;
+      overflow: auto;
+      height: 100vh;
+
+      .nav-bar__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .nav-item {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.nav-bar.with-menu :nth-child(2) { order: 1; }
+
+@media screen and (max-width: 1440px) {
+  .nav-bar {
+    padding: 0 75px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-bar {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    padding: 0 10px;
+  }
+}

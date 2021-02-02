@@ -1,0 +1,30 @@
+@import '../shared-styles.scss';
+
+.actions {
+  height: 45px;
+  font-size: 20px;
+  background: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 50px;
+  color: $bgColor;
+  padding: 15px;
+}
+
+.action {
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 100%;
+}
+
+.action.hover {
+  background: $bgHover;
+}
